@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+  color: #F5ECCD;
+  background-color: #783C44;
+  font-family: quicksand;
+  margin: 5%;
+}
+
+h1 {
+  font: #F5C1AC;
+  font-family: La Belle Aurore;
+  text-align: center;
+}
