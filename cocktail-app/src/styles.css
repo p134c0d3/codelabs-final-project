@@ -5,11 +5,10 @@ body {
   color: #F5ECCD;
   background-color: #783C44;
   font-family: quicksand;
-  margin: 5%;
 }
 
 h1 {
   font: #F5C1AC;
-  font-family: La Belle Aurore;
+  font-family: quicksand;
   text-align: center;
 }

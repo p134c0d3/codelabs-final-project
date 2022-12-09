@@ -1,7 +1,59 @@
-.search {
+/* .search {
   /* background-color: dimgray;
   border-radius: 10px;
   opacity: 0.5;
   padding: 25px; */
+  /* text-align: center;
+} */
+
+.image{
+  background:url('../../assets/images/cocktail.jpg') no-repeat center center;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+}
+
+h1 {
+  color: #7A6D76;
+}
+
+p {
   text-align: center;
 }
+
+.search {
+  height: 200px;
+  position: relative;
+  padding: 20px;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  width: 500px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+form input
+ {
+  width: 900px;
+  border-radius: 5px;
+  padding: 3px;
+ }
+
+ button {
+  border-radius: 5px;
+  font: quicksand;
+  background-color: black;
+  color: white;
+  border-color: white;
+ }
