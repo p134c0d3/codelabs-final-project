@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+.navbar-brand {
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 32px;
+  padding-bottom: 0px;
+  color: #F5ECCD;
+}
+
+.nav-link {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 10px;
+  color: #F5ECCD;
+}
+
+.nav-link:hover {
+  color: #ED9178;
+}
+
+
+.navbar-custom {
+ background-color: #783C44;
+}
+
