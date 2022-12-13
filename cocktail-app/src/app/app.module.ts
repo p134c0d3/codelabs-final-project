@@ -10,7 +10,6 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RandomCocktailComponent } from './random-cocktail/random-cocktail.component';
-import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -19,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module'
     SearchComponent,
     HomeComponent,
     NavComponent,
-    RandomCocktailComponent
+    RandomCocktailComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +26,9 @@ import { AppRoutingModule } from './app-routing.module'
 
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
