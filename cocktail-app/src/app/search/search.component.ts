@@ -9,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 export class SearchComponent implements OnInit {
   onFetchCocktails(searchInput: string) {
     const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
+    console.log(formattedQuery);
     this.http
       .get(
-        `https://www.thecocktaildb.com/api/json/v1/1/random.php?=${formattedQuery}`
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${formattedQuery}`
       )
       .subscribe((searchResults) => {
         console.log('searchResults', searchResults);
