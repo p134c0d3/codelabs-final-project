@@ -1,1 +1,35 @@
-<p>favorites works!</p>
+<div class="row">
+    <div class="col-xs-12">
+      <h3>Random Cocktails</h3>
+      <p>If you are thirsty, try a random cocktail to change things up!</p>
+      <hr />
+      <h1 class="text-center">Random Cocktail List</h1>
+      <ul class="list-group col-md-3" *ngFor="let cocktail of randCocktails">
+        <li
+          class="list-group-item flex justify-content-between align-items-center"
+        >
+          <p>
+            <span class="badge bg-success" style="margin-right: 5px"
+              >Cocktail:</span
+            >{{ cocktail.cocktail }}
+          </p>
+          <p>
+            <span class="badge bg-warning text-dark" style="margin-right: 5px"
+              >Ingredients:</span
+            >
+            {{ cocktail.ingredients }}
+          </p>
+          <p>
+            <span class="badge bg-info text-dark" style="margin-right: 10px"
+              >Glass:</span
+            >{{ cocktail.glass }}
+          </p>
+
+          <button class="btn btn-primary position-relative">
+            <!-- <span class="position-absolute top-0 start-0 translate-middle badge bg-secondary rounded-pill">{{ activities.participants }}</span> -->
+            Add to Favorites
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>

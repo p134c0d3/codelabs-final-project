@@ -7,8 +7,10 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { SearchComponent } from './search/search.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RandomCocktailComponent } from './random-cocktail/random-cocktail.component';
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -16,11 +18,15 @@ import { SearchComponent } from './search/search.component';
     FavoritesComponent,
     SearchComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    RandomCocktailComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
+
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
