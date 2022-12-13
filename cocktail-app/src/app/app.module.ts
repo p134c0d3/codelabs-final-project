@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RandomCocktailComponent } from './random-cocktail/random-cocktail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     FavoritesComponent,
     SearchComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    RandomCocktailComponent
   ],
   imports: [
     BrowserModule,
