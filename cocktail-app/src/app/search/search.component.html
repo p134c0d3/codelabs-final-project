@@ -1,62 +1,54 @@
-<!-- <form
-  #searchForm="ngForm"
-  (ngSubmit)="onFetchCocktails(searchForm.value.search)"
-  class="form-inline"
->
-  <div class="form-group mr-2"> -->
-<!-- SEARCH -->
-<!-- <label for="search" class="sr-only">Search</label>
-    <input
-      type="search"
-      class="form-control"
-      name="search"
-      id="search"
-      placeholder="Search"
-      [(ngModel)]="searchForm.value.search"
-      required
-    />
-  </form>
-  </div> -->
-
-<!-- SUBMIT -->
 <button
   class="btn btn-primary"
   type="button"
   (click)="generateRandCocktails()"
-  style="margin-bottom: 10px"
+  style="margin-bottom: 10px; margin-left: 5px"
 >
   Random Cocktail
 </button>
-
-<div class="card mb-3" style="max-width: 540px">
-  <div class="row g-0">
-    <div class="col-md-4" *ngIf="this.randCocktails.imgPath != null">
-      <img
-        src="{{ this.randCocktails.imgPath }}"
-        class="img-fluid rounded-start"
-        alt="..."
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5
-          class="card-title"
-          style="color: #783c44"
-          *ngIf="this.randCocktails.cocktail != null"
-        >
-          {{ this.randCocktails.cocktail }}
-        </h5>
-        <p
-          class="card-text"
-          style="color: #783c44"
-          *ngIf="this.randCocktails.ingredients != null"
-        >
-          {{ this.randCocktails.ingredients }}
-        </p>
-        <p class="card-text" *ngIf="this.randCocktails.glass != null">
-          <small class="text-muted">{{ this.randCocktails.glass }}</small>
-        </p>
+<button
+  class="btn btn-primary"
+  type="button"
+  (click)="generateRandCocktails()"
+  style="margin-bottom: 10px; margin-left: 5px"
+>
+  Pin to Favorites
+</button>
+<ng-container *ngIf="this.randCocktails.cocktail !== ''">
+  <div
+    class="card mb-3"
+    style="max-width: 540px; margin-left: 5px"
+    *ngIf="this.randCocktails"
+  >
+    <div class="row g-0">
+      <div class="col-md-4" *ngIf="this.randCocktails.imgPath != null">
+        <img
+          src="{{ this.randCocktails.imgPath }}"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5
+            class="card-title"
+            style="color: #783c44"
+            *ngIf="this.randCocktails.cocktail != null"
+          >
+            {{ this.randCocktails.cocktail }}
+          </h5>
+          <p
+            class="card-text"
+            style="color: #783c44"
+            *ngIf="this.randCocktails.ingredients != null"
+          >
+            {{ this.randCocktails.ingredients }}
+          </p>
+          <p class="card-text" *ngIf="this.randCocktails.glass != null">
+            <small class="text-muted">{{ this.randCocktails.glass }}</small>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>

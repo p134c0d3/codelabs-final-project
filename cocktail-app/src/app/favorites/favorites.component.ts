@@ -7,15 +7,7 @@ import { Cocktail } from './cocktail.model';
   styleUrls: ['./favorites.component.css'],
 })
 export class FavoritesComponent implements OnInit {
-  randCocktails: Cocktail[] = [
-    new Cocktail(
-      'Margarita',
-      'Tequila, lime juice, ice cubes',
-      'Double-bowl',
-      '#'
-    ),
-    new Cocktail('Screwdriver', 'Orange Juice, Vodka', 'Highball Glass', '#'),
-  ];
+  randCocktails: Cocktail[] = [];
 
   constructor() {}
 

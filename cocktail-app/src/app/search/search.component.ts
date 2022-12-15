@@ -20,8 +20,8 @@ export class SearchComponent implements OnInit {
     return this.http
       .get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
       .subscribe((response: any) => {
-        console.log(response);
         const drink = response.drinks[0];
+
         this.randCocktails = {
           cocktail: drink.strDrink,
           ingredients:
