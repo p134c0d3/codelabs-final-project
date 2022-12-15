@@ -37,13 +37,29 @@
           >
             {{ this.randCocktails.cocktail }}
           </h5>
-          <p
+          <!-- <p
             class="card-text"
             style="color: #783c44"
             *ngIf="this.randCocktails.ingredients != null"
           >
             {{ this.randCocktails.ingredients }}
-          </p>
+          </p> -->
+          <ul class="d-flex flex-row flex-wrap list-group">
+            <div
+              *ngFor="
+                let ingredient of randCocktails.ingredients;
+                let i = index
+              "
+            >
+              <li
+                class="card-text list-group-item border-0"
+                style="color: #783c44"
+                *ngIf="this.randCocktails.ingredients[i] != null"
+              >
+                {{ ingredient }}
+              </li>
+            </div>
+          </ul>
           <p class="card-text" *ngIf="this.randCocktails.glass != null">
             <small class="text-muted">{{ this.randCocktails.glass }}</small>
           </p>

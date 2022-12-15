@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
   constructor(private http: HttpClient) {}
   randCocktails: Cocktail = {
     cocktail: '',
-    ingredients: '',
+    ingredients: [],
     glass: '',
     imgPath: '',
   };
@@ -21,21 +21,17 @@ export class SearchComponent implements OnInit {
       .get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
       .subscribe((response: any) => {
         const drink = response.drinks[0];
-
+        console.log(drink.strIngredient1);
         this.randCocktails = {
           cocktail: drink.strDrink,
-          ingredients:
-            drink.strIngredient1 +
-            '  ' +
-            drink.strIngredient2 +
-            '  ' +
-            drink.strIngredient3 +
-            '  ' +
-            drink.strIngredient4 +
-            '  ' +
-            drink.strIngredient5 +
-            '  ' +
+          ingredients: [
+            drink.strIngredient1,
+            drink.strIngredient2,
+            drink.strIngredient3,
+            drink.strIngredient4,
+            drink.strIngredient5,
             drink.strIngredient6,
+          ],
           glass: drink.strGlass,
           imgPath: drink.strDrinkThumb,
         };
