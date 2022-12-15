@@ -30,18 +30,31 @@
 
 <div class="card mb-3" style="max-width: 540px">
   <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="..." />
+    <div class="col-md-4" *ngIf="this.randCocktails.imgPath != null">
+      <img
+        src="{{ this.randCocktails.imgPath }}"
+        class="img-fluid rounded-start"
+        alt="..."
+      />
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title" style="color: #783c44">Card title</h5>
-        <p class="card-text" style="color: #783c44">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
+        <h5
+          class="card-title"
+          style="color: #783c44"
+          *ngIf="this.randCocktails.cocktail != null"
+        >
+          {{ this.randCocktails.cocktail }}
+        </h5>
+        <p
+          class="card-text"
+          style="color: #783c44"
+          *ngIf="this.randCocktails.ingredients != null"
+        >
+          {{ this.randCocktails.ingredients }}
         </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
+        <p class="card-text" *ngIf="this.randCocktails.glass != null">
+          <small class="text-muted">{{ this.randCocktails.glass }}</small>
         </p>
       </div>
     </div>

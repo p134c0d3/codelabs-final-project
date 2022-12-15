@@ -35,29 +35,11 @@ export class SearchComponent implements OnInit {
             '  ' +
             drink.strIngredient5 +
             '  ' +
-            drink.strIngredient6 +
-            '  ' +
-            drink.strIngredient7 +
-            '  ' +
-            drink.strIngredient8 +
-            '  ' +
-            drink.strIngredient9 +
-            '  ' +
-            drink.strIngredient10 +
-            '  ' +
-            drink.strIngredient11 +
-            '  ' +
-            drink.strIngredient12 +
-            '  ' +
-            drink.strIngredient13 +
-            '  ' +
-            drink.strIngredient14 +
-            '  ' +
-            drink.strIngredient15,
+            drink.strIngredient6,
           glass: drink.strGlass,
           imgPath: drink.strDrinkThumb,
         };
-        console.log(this.randCocktails.imgPath);
+        let randomCocktails = this.randCocktails;
       });
   }
 
