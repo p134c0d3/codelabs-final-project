@@ -1,26 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RandomCocktail } from './favorites/favorites.model';
+import { RandomCocktail } from './favorites/cocktail.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CrudService {
   allCocktails: any;
 
   constructor(private http: HttpClient) {}
 
-fetchCocktails(searchInput: string) {
-  const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
-  this.http
-    .get(`https://www.thecocktaildb.com/api/json/v1/1/random.php${formattedQuery}`)
-    .subscribe((response) => {
-      // console.log('response', response);
-      this.saveCocktails(response);
-    });
-}
+  onFetchCocktails() {
+    // const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
+    // console.log(formattedQuery);
+    this.http
+      .get('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+      .subscribe((searchResults) => {
+        console.log(searchResults);
+      });
+  }
 
-saveCocktails(cocktails: Object) {
-
-}
+  saveCocktails(cocktails: Object) {}
 }

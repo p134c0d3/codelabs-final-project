@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RandomCocktail } from './favorites.model';
+import { Cocktail } from './cocktail.model';
 
 @Component({
   selector: 'app-favorites',
@@ -7,13 +7,14 @@ import { RandomCocktail } from './favorites.model';
   styleUrls: ['./favorites.component.css'],
 })
 export class FavoritesComponent implements OnInit {
-  randCocktails: RandomCocktail[] = [
-    new RandomCocktail(
+  randCocktails: Cocktail[] = [
+    new Cocktail(
       'Margarita',
       'Tequila, lime juice, ice cubes',
-      'Double-bowl'
+      'Double-bowl',
+      '#'
     ),
-    new RandomCocktail('Screwdriver', 'Orange Juice, Vodka', 'Highball Glass'),
+    new Cocktail('Screwdriver', 'Orange Juice, Vodka', 'Highball Glass', '#'),
   ];
 
   constructor() {}

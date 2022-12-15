@@ -1,11 +1,11 @@
-<form
+<!-- <form
   #searchForm="ngForm"
   (ngSubmit)="onFetchCocktails(searchForm.value.search)"
   class="form-inline"
 >
-  <div class="form-group mr-2">
-    <!-- SEARCH -->
-    <label for="search" class="sr-only">Search</label>
+  <div class="form-group mr-2"> -->
+<!-- SEARCH -->
+<!-- <label for="search" class="sr-only">Search</label>
     <input
       type="search"
       class="form-control"
@@ -15,11 +15,18 @@
       [(ngModel)]="searchForm.value.search"
       required
     />
-  </div>
+  </form>
+  </div> -->
 
-  <!-- SUBMIT -->
-  <button class="btn btn-primary" type="submit">Search</button>
-</form>
+<!-- SUBMIT -->
+<button
+  class="btn btn-primary"
+  type="button"
+  (click)="generateRandCocktails()"
+  style="margin-bottom: 10px"
+>
+  Random Cocktail
+</button>
 
 <div class="card mb-3" style="max-width: 540px">
   <div class="row g-0">
@@ -28,8 +35,8 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
+        <h5 class="card-title" style="color: #783c44">Card title</h5>
+        <p class="card-text" style="color: #783c44">
           This is a wider card with supporting text below as a natural lead-in
           to additional content. This content is a little bit longer.
         </p>
